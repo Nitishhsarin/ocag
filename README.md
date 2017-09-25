@@ -1,2 +1,2 @@
 # OCAG
-This Project is currently in Developmemt phase and will be Deployed on Heroku.
+This Project is currently in Development Phase and will be deployed on Heroku, once complete.
