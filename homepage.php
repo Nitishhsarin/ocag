@@ -9,7 +9,7 @@
 			<?php include("include/head.php"); ?>
 			<br><br>
 			<div id="content">
-				<?php include('include/walkthrough.php'); ?>
+		<!--		<?php include('include/walkthrough.php'); ?>	-->
 			</div>
 			<?php include("include/bottom.php"); ?>
 		</div>
