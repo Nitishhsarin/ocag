@@ -26,7 +26,7 @@ if(isset($_GET['user']))
 	if($_SESSION['type']=="admin" || ($_SESSION['username']==$username))
 	{
 		echo "
-	<form id='login_form' method='post' action='./functions/cpasschange.php'>
+	<form id='login_form' method='post' action='./functions/passchange.php'>
 		<h2>Change Password</h2>
 		<input type='hidden' name='username' value='$username'>
 		<table id='logintable' >
