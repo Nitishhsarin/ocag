@@ -15,7 +15,6 @@ if(!(isloggedin("admin")==true || ( isset($_GET['edit']) && (isloggedin("faculty
 else
 {
 	include('include/head.php');
-	include("include/navigation.php");
 
 	include('include/facregform.php');
 	include('include/bottom.php');

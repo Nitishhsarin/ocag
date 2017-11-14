@@ -15,7 +15,6 @@ if(!(isloggedin("any")==true))
 else
 {
 	include("include/head.php");
-	include("include/navigation.php");
 	include('include/mysql_test.php');
 	echo '
 	<div id="content">

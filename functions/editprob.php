@@ -9,7 +9,7 @@ else
 
 	ini_set('display_errors',1);
 	ini_set('display_startup_errors',1);
-	include('./../includes/mysql_faculty.php');//change this later
+	include('./../include/mysql_faculty.php');//change this later
 	error_reporting(-1);
 	mysqli_autocommit($db,false);
 	$problem_code='';

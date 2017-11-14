@@ -12,7 +12,6 @@ if(!(isloggedin("faculty")==true))
 else
 {
 	include("include/head.php");
-	include("include/navigation.php");
 
 	echo '
 	<div id="content">

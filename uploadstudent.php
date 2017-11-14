@@ -20,7 +20,6 @@ if(!(isloggedin("admin")==true))
 else
 {
 	include("include/head.php");
-	include("include/navigation.php");
 	echo "
 	<div id='content' style='margin-top: 20px'>
 		<h3>Register students via csv</h3>

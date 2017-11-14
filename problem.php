@@ -22,7 +22,6 @@ else
 	ini_set('display_startup_errors',1);
 	error_reporting(-1);
 	include("include/head.php");
-	include("include/navigation.php");
 	
 	include('include/mysql_view.php');
 	$username='';
@@ -81,7 +80,7 @@ else
 			$testid=strip_tags(mysqli_real_escape_string($db,$_POST['testid']));
 		if($_SESSION['type']=="student")
 		{
-			include('./scripts/isstudentauthorised_test.php');
+			include('./functions/studauthorised.php');
 			$res=isstudentauthorised($db,$username,$testid);
 			if($res==2 || $res==3)
 			{
@@ -114,7 +113,7 @@ else
 		goto end;
 	if($istest==true)
 		echo "<a href='./test.php?testid=$testid'><input type='button' value='Back to Problems' class='bbutton' ></a>";
-	echo "<br><a href='./user_submissions.php?pcode=$probcode' class='bbutton'>View Submissions </a>";
+	echo "<br><a href='./usersubmit.php?pcode=$probcode' class='bbutton'>View Submissions </a>";
 	
 	$languagesallowed=array();
 	$query="select language from problems_languagesallowed where problem_code='$probcode'";
@@ -125,55 +124,55 @@ else
 		$languagesallowed[]=$s;
 		//echo $s;
 	}
-	if(file_exists("./PROBLEMS/$probcode/title"))
-     		$problemtitle=nl2br(file_get_contents("./PROBLEMS/$probcode/title"));
+	if(file_exists("./problems/$probcode/title"))
+     		$problemtitle=nl2br(file_get_contents("./problems/$probcode/title"));
 	else
 		$problemtitle='';
-	if(file_exists("./PROBLEMS/$probcode/statement"))
-		$problemstatement=nl2br(file_get_contents("./PROBLEMS/$probcode/statement"));
+	if(file_exists("./problems/$probcode/statement"))
+		$problemstatement=nl2br(file_get_contents("./problems/$probcode/statement"));
 	else
 		$problemstatement='';
-	if(file_exists("./PROBLEMS/$probcode/input_desc"))
-		$input_desc=nl2br(file_get_contents("./PROBLEMS/$probcode/input_desc"));
+	if(file_exists("./problems/$probcode/input_desc"))
+		$input_desc=nl2br(file_get_contents("./problems/$probcode/input_desc"));
 	else
 		$input_desc='';
-	if(file_exists("./PROBLEMS/$probcode/output_desc"))
-	      	$output_desc=nl2br(file_get_contents("./PROBLEMS/$probcode/output_desc"));
+	if(file_exists("./problems/$probcode/output_desc"))
+	      	$output_desc=nl2br(file_get_contents("./problems/$probcode/output_desc"));
 	else
 		$output_desc='';
-	if(file_exists("./PROBLEMS/$probcode/constraints"))
-		$constraints=nl2br(file_get_contents("./PROBLEMS/$probcode/constraints"));
+	if(file_exists("./problems/$probcode/constraints"))
+		$constraints=nl2br(file_get_contents("./problems/$probcode/constraints"));
 	else
 		$constraints='';
-	if(file_exists("./PROBLEMS/$probcode/sampleip"))
-	      	$sampleip=nl2br(file_get_contents("./PROBLEMS/$probcode/sampleip"));
+	if(file_exists("./problems/$probcode/sampleip"))
+	      	$sampleip=nl2br(file_get_contents("./problems/$probcode/sampleip"));
 	else
 		$sampleip='';
-	if(file_exists("./PROBLEMS/$probcode/sampleop"))
-	     	$sampleop=nl2br(file_get_contents("./PROBLEMS/$probcode/sampleop"));
+	if(file_exists("./problems/$probcode/sampleop"))
+	     	$sampleop=nl2br(file_get_contents("./problems/$probcode/sampleop"));
 	else
 		$sampleop='';
-	if(file_exists("./PROBLEMS/$probcode/sampleexp"))
-	     	$sampleexp=nl2br(file_get_contents("./PROBLEMS/$probcode/sampleexp"));
+	if(file_exists("./problems/$probcode/sampleexp"))
+	     	$sampleexp=nl2br(file_get_contents("./problems/$probcode/sampleexp"));
 	else
 		$sampleexp='';
 	
-      	include("./includes/page_title.php");
-      	include("./includes/page_content.php"); 
-     	include("./includes/sample_io.php"); 
-	include("./includes/sample_exp.php");
+      	include("./include/title.php");
+      	include("./include/problem.php"); 
+     	include("./include/io.php"); 
+	include("./include/explanation.php");
 		
-	include("./includes/submit.php"); 
+	include("./include/submit.php"); 
 	
 
 	end:
 		echo "$errorstr
 	</div> <!-- end #content -->
 	";
-      include("./includes/sidebar.php");
+      include("./include/side.php");
     
 	      
-      include("./includes/footer.php"); 
+      include("./include/bottom.php"); 
 }
 ?>
 </div> <!-- End #wrapper -->

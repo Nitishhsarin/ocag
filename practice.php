@@ -18,7 +18,6 @@
 		$errorstr="";
 		
 		include("include/head.php");
-		include("include/navigation.php");
 		include('include/mysql_view.php');
 		echo "
 		<div id='content'>

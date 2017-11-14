@@ -58,16 +58,16 @@ function filecmp($userop,$op)
 	}
 	return true;
 }
-require('./determineidentityfunc.php');
+require('./checkidentity.php');
 
 if(!(isloggedin("any")==true) )
 {
-	header('Location: ./../home.php');
+	header('Location: ./../homepage.php');
 }
 else
 {
-	include('./../includes/mysql_login_test.php');
-	require('./isstudentauthorised_test.php');
+	include('./../include/mysql_test.php');
+	require('./studauthorised.php');
 	if(isset($_POST['testid']) && $_SESSION['type']!="admin" && $_SESSION['type']!="faculty" && isstudentauthorised($db,$_SESSION['username'],$_POST['testid'])!=1)
 	{
 		mysqli_close($db);
@@ -89,7 +89,7 @@ else
 			$errorstr='';
 			$status=true;
 		
-			include_once('./../includes/listoflanguages.php');
+			include_once('./../include/languages.php');
 			$filename=$_FILES['solution']['name'];
 			$filetype=$_FILES['solution']['type'];
 			$filesize=$_FILES['solution']['size'];
@@ -102,7 +102,7 @@ else
 			$extension=$languages_extensions[$language];
 			//SEE EXIT CODES FOR JAVA
 		
-			include('./../includes/mysql_login_evaluate.php');
+			include('./../include/mysql_evaluate.php');
 			mysqli_autocommit($db,false);
 			$query="insert into submissions(problem_code,username,submissiontime,verdict,executiontime,language,count_ac,count_wa,count_rte,count_tle) values ('$probcode','$username',CURRENT_TIMESTAMP(),'PENDING',NULL,'$language',0,0,0,0)";
 	
@@ -123,7 +123,7 @@ else
 			$timeofexecution=0.00;
 			$newfilename=$subid.$extension;
 			chdir("./../");//confirm this********************
-			chdir("submissions");
+			chdir("codes");
 		
 			$res=shell_exec("ls $username");
 		
@@ -208,9 +208,9 @@ else
 						if($wrongcase_verdict<3 && $showmistakes=='true')
 						{
 							$wrongcase_verdict=3;
-							$wrongcase_input=file_get_contents("../../../PROBLEMS/$probcode/IPOPFILES/ip$i");
+							$wrongcase_input=file_get_contents("../../../problems/$probcode/IPOPFILES/ip$i");
 							$wrongcase_output="TIME LIMIT EXCEEDED";
-							$wrongcase_expectedoutput=file_get_contents("../../../PROBLEMS/$probcode/IPOPFILES/op$i");
+							$wrongcase_expectedoutput=file_get_contents("../../../problems/$probcode/IPOPFILES/op$i");
 						}
 						//$endresult=3;
 						echo shell_exec("rm op$subid");
@@ -235,9 +235,9 @@ else
 						if($wrongcase_verdict<4  && $showmistakes=='true')
 						{
 							$wrongcase_verdict=4;
-							$wrongcase_input=file_get_contents("../../../PROBLEMS/$probcode/IPOPFILES/ip$i");
+							$wrongcase_input=file_get_contents("../../../problems/$probcode/IPOPFILES/ip$i");
 							$wrongcase_output="RUN TIME ERROR. RETURN CODE $line";
-							$wrongcase_expectedoutput=file_get_contents("../../../PROBLEMS/$probcode/IPOPFILES/op$i");
+							$wrongcase_expectedoutput=file_get_contents("../../../problems/$probcode/IPOPFILES/op$i");
 						}
 						echo shell_exec("rm op$subid");
 						echo shell_exec("rm timelog");
@@ -245,7 +245,7 @@ else
 						continue;
 					}
 					$useropfile=fopen("op$subid","r");
-					$reqop=fopen("../../../PROBLEMS/$probcode/IPOPFILES/op$i","r");
+					$reqop=fopen("../../../problems/$probcode/IPOPFILES/op$i","r");
 		//			echo "opfile is $reqop";
 					if(!($reqop))
 						echo "cannot open req file";
@@ -265,9 +265,9 @@ else
 							/*$wrongcase_input=file_get_contents("../../../PROBLEMS/$probcode/IPOPFILES/ip$i");
 							$wrongcase_output=file_get_contents("op$subid");
 							$wrongcase_expectedoutput=file_get_contents("../../../PROBLEMS/$probcode/IPOPFILES/op$i");*/
-							$ipfile=fopen("../../../PROBLEMS/$probcode/IPOPFILES/ip$i","r");
+							$ipfile=fopen("../../../problems/$probcode/IPOPFILES/ip$i","r");
 							$opfile=fopen("op$subid","r");
-							$expectedopfile=fopen("../../../PROBLEMS/$probcode/IPOPFILES/op$i","r");
+							$expectedopfile=fopen("../../../problems/$probcode/IPOPFILES/op$i","r");
 							
 							$wrongcase_input.=fread($ipfile,100);
 						
@@ -368,7 +368,7 @@ else
 				
 				if($endresult==-1)
 				{
-					echo "<form id='redirect_cte' method='post' action='./../viewsolution.php?submissionid=$subid&a'>
+					echo "<form id='redirect_cte' method='post' action='./../solution.php?submissionid=$subid&a'>
 					<input type='hidden' name='submissionid' value='$subid'>
 					<input type='hidden' name='compileerror_details' value='$compileres'>
 					
@@ -382,11 +382,11 @@ else
 					";
 				}
 				else if($showmistakes=='false' || $wrongcase_verdict==0)
-				header("Location: ./../viewsolution.php?submissionid=$subid");
+				header("Location: ./../solution.php?submissionid=$subid");
 			
 				else
 				{
-					echo "<form id='redirect' method='post' action='./../viewsolution.php?submissionid=$subid'>
+					echo "<form id='redirect' method='post' action='./../solution.php?submissionid=$subid'>
 					<input type='hidden' name='submissionid' value='$subid'>
 					<input type='hidden' name='wrongcase_input' value='$wrongcase_input'>
 					<input type='hidden' name='wrongcase_output' value='$wrongcase_output'>			
@@ -408,7 +408,7 @@ else
 			
 				mysqli_rollback($db);
 				mysqli_close($db);
-				header("Location: ./../home.php?msg=$errorstr");
+				header("Location: ./../homepage.php?msg=$errorstr");
 			}
 		
 		
