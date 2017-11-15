@@ -22,7 +22,6 @@ function filecmp($userop,$op)
 	while(($lineop=fgets($op))!=false)
 	{
 		$lineoparr[]=trim($lineop);
-	//	echo $lineop;//REMOVE THIS LATER
 		$oparrsize++;
 		if(trim($lineop)!="")
 		{
@@ -36,7 +35,6 @@ function filecmp($userop,$op)
 	while(($lineuserop=fgets($userop))!=false)
 	{
 		$lineuseroparr[]=trim($lineuserop);
-	//	echo $lineuserop;//REMOVE THIS LATER
 		$useroparrsize++;
 		if(trim($lineuserop)!="")
 		{
@@ -73,7 +71,6 @@ else
 		mysqli_close($db);
 		$testid=$_POST['testid'];
 		echo "here";
-	//	header("Location: ./../test.php?testid=$testid");
 	}
 	else
 	{
@@ -100,7 +97,6 @@ else
 			$language=$_POST['language'];
 			$compiler=$languages_compilers[$language];
 			$extension=$languages_extensions[$language];
-			//SEE EXIT CODES FOR JAVA
 		
 			include('./../include/mysql_evaluate.php');
 			mysqli_autocommit($db,false);
@@ -113,13 +109,12 @@ else
 			}
 			else
 			{
-				$errorstr= "initial insertion failed";//what to do if initial insertion fails;
+				$errorstr= "initial insertion failed";
 				$status=false;
 				goto end;
 		
 			}
 			$subid= mysqli_insert_id($db);
-	//		$timestamp=date("YmdHms");
 			$timeofexecution=0.00;
 			$newfilename=$subid.$extension;
 			chdir("./../");//confirm this********************
@@ -192,7 +187,7 @@ else
 			
 				for($i=1;$i<=$numberoffiles;$i+=1)
 				{
-			echo shell_exec("ulimit -t $timelimit; time ./$subid.out < ../../../PROBLEMS/$probcode/IPOPFILES/ip$i > op$subid 2>timelog;echo $?>errorlog");
+			echo shell_exec("ulimit -t $timelimit; time ./$subid.out < ../../../problems/$probcode/IPOPFILES/ip$i > op$subid 2>timelog;echo $?>errorlog");
 	/*		echo "ulimit -t $timelimit; time ./$subid.out < ../../../PROBLEMS/$probcode/IPOPFILES/ip$i > op$subid 2>timelog;echo $?>errorlog";*/
 					echo "ran ./$subid.out";
 					$timelog=fopen("timelog","r");

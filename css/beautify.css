@@ -1,13 +1,13 @@
 @font-face
 {
-font-family: Roboto;
-src: url(./../../assets/Roboto.ttf);
+font-family: "Source Sans Pro";
+src: url("./../fonts/Product Sans Regular.ttf");
 }
 body
 {
     width: 100%;
     height:100%;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     font-size:14px;
     color:#333;
     margin:0;
@@ -42,8 +42,8 @@ a:active {color:#396070; text-decoration:none;}  /* selected link */
 
 .header {
     width: 100%;
-    background-color: #2a4956;
-    border-top: #396070 solid 10px;
+    background-color: #29363B;
+    border-top: #29363B solid 10px;
     height: 60px;
     padding: 0% 10%;
     box-sizing: border-box;
@@ -117,7 +117,7 @@ a:active {color:#396070; text-decoration:none;}  /* selected link */
 {
     padding-top:8px;
     padding-bottom:8px;
-    background-color:#2a4956;
+    background-color:#29363B;
     color:#ffffff;
 }
 #tc_analysis_table td
@@ -196,10 +196,10 @@ a:active {color:#396070; text-decoration:none;}  /* selected link */
 }
 #login_form h2
 {
-    background-color:#2a4956;
+    background-color:#29363B;
     color:#ffffff;
     font-size:22px;
-    font-weight:600;
+    font-weight:500;
     text-align:center;
     padding:10px;
 }
@@ -209,7 +209,7 @@ a:active {color:#396070; text-decoration:none;}  /* selected link */
 #profile
 {
     width:100%;
-    background-color:#2a4956;
+    background-color:#29363B;
     color:#ffffff;
     text-align:center;
 
@@ -217,7 +217,7 @@ a:active {color:#396070; text-decoration:none;}  /* selected link */
 #profile h2
 {
     font-size:22px;
-    font-weight:600;
+    font-weight:500;
     padding:10px;
 }
 #profile h3
@@ -267,7 +267,7 @@ a:active {color:#396070; text-decoration:none;}  /* selected link */
     border: none;
     font-size: 12px;
     cursor: pointer;
-    font-family:Roboto;
+    font-family:'Source Sans Pro';
 }
 .button.blue
 {
@@ -288,7 +288,7 @@ a:active {color:#396070; text-decoration:none;}  /* selected link */
 
 .gbutton
 {
-    font-family:Roboto;
+    font-family:'Source Sans Pro';
     display: table;
     padding: 3px 10px 4px 10px;
     border: none;
@@ -314,7 +314,7 @@ a:active {color:#396070; text-decoration:none;}  /* selected link */
 
 .rbutton
 {
-    font-family:Roboto;
+    font-family:'Source Sans Pro';
     display: table;
     padding: 3px 10px 4px 10px;
     border: none;
@@ -340,7 +340,7 @@ a:active {color:#396070; text-decoration:none;}  /* selected link */
 
 .bbutton
 {
-    font-family:Roboto;
+    font-family:'Source Sans Pro';
     display: table;
     padding: 3px 10px 4px 10px;
     border: none;
@@ -350,12 +350,12 @@ a:active {color:#396070; text-decoration:none;}  /* selected link */
 .bbutton
 {
     background-color: #f9f9f9;
-    border:2px solid #2a4956;
+    border:2px solid #29363B;
 }
 .bbutton:hover
 {
     border:2px solid #396070;
-    background-color: #2a4956;
+    background-color: #29363B;
     color: #ffffff;
 }
 .bbutton:active
@@ -495,7 +495,7 @@ a:active {color:#396070; text-decoration:none;}  /* selected link */
     padding-top:8px;
     padding-bottom:8px;
     border:1px solid #ffffff;
-    background-color:#2a4956;
+    background-color:#29363B;
     color:#ffffff;
 }
 #minitable td
@@ -521,7 +521,7 @@ a:active {color:#396070; text-decoration:none;}  /* selected link */
     padding-top:8px;
     padding-bottom:8px;
     border:1px solid #ffffff;
-    background-color:#2a4956;
+    background-color:#29363B;
     color:#ffffff;
 }
 #listtable td
@@ -627,7 +627,7 @@ div.content_tab
 {
     width:80%;
     margin-left:10%;
-    background-color:#2a4956;
+    background-color:#29363B;
     color:#ffffff;
     text-align:center;
 
@@ -664,4 +664,8 @@ div.content_tab
 {
     padding:10px;
     background-color:#f9f9f9;
+}
+h3 {
+    font-size:1.3em;
+    font-weight: normal;
 }

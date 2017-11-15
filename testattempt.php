@@ -20,12 +20,12 @@ else
 	echo "
 	<div id='content'>
 	";
-	include("include/test_attemptedby_table.php");
+	include("include/testattempt.php");
 	echo "
 	</div>
 	";
-	include("includes/side.php"); 
-	include("includes/bottom.php"); 
+	include("include/side.php"); 
+	include("include/bottom.php"); 
 }
 ?>
 </div>

@@ -21,7 +21,7 @@ else
 	echo '
 	<div id="content">
 	';
-	include("includes/viewtest.php");
+	include("include/viewtest.php");
 	echo '
 	</div>
 	';

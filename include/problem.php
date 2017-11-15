@@ -5,15 +5,15 @@ echo "
 	$problemstatement
 	</p>
 	<p>
-	<strong>Input Format:</strong><br />
+	<strong>Input Format:</strong><br /><br />
 	$input_desc
 	</p>
 	<p>
-	<strong>Output Format:</strong><br />
+	<strong>Output Format:</strong><br /><br />
 	$output_desc
 	</p>
 	<p>
-	<strong>Conditions to look out for:</strong><br />
+	<strong>Conditions to look out for:</strong><br /><br />
 	$constraints
 	</p>
 	</div>

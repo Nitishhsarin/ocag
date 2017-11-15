@@ -81,7 +81,7 @@ if(isset($_GET['prev']))
 	echo "</div>";
 }
 ?>
-<form id='login_form' method='post' action='./scripts/makefac.php'>
+<form id='login_form' method='post' action='./functions/makefac.php'>
 	<h2>New Faculty Registration</h2>
 	<table id='logintable' >
 		<tr>

@@ -80,7 +80,7 @@ if(isset($_GET['prev']))
 	<table id='nptable'>
 	<tr>
  		<td valign='top'>
-			<label><strong>Problem Code :</strong></label>
+			<label>Problem Code :</label>
  		</td>
 		<td>
   			<input  type='text' style='width: 400px;' name='problem_code' required onblur='validate_problemcode(this)'>
@@ -115,7 +115,7 @@ if(isset($_GET['prev']))
 	</tr>
 	<tr>
  		<td valign='top'>
-			<label><strong>Problem Title :</strong></label>
+			<label>Problem Title :</label>
  		</td>
 		<td>
   			<input  type='text' style='width: 400px;' name='problem_title' required x-moz-errormessage='Enter Problem Title'>
@@ -124,7 +124,7 @@ if(isset($_GET['prev']))
  
 	<tr>
  		<td valign='top'>
-  			<label><strong>Problem Statement :</strong></label>
+  			<label>Problem Statement :</label>
  		</td>
  		<td>
  			<textarea  name='problem_statement' cols='70' rows='15'></textarea>
@@ -133,7 +133,7 @@ if(isset($_GET['prev']))
 	
 	<tr>
  		<td valign='top'>
-  			<label><strong>Input :</strong></label>
+  			<label>Input :</label>
  		</td>
  		<td>
  			<textarea  name='input_desc' cols='50' rows='5'></textarea>
@@ -142,7 +142,7 @@ if(isset($_GET['prev']))
 	
 	<tr>
  		<td valign='top'>
-  			<label><strong>Output :</strong></label>
+  			<label>Output :</label>
  		</td>
  		<td>
  			<textarea  name='output_desc' cols='50' rows='5'></textarea>
@@ -151,7 +151,7 @@ if(isset($_GET['prev']))
 	
 	<tr>
  		<td valign='top'>
-  			<label><strong>Constraints :</strong></label>
+  			<label>Constraints :</label>
  		</td>
  		<td>
  			<textarea  name='constraints' cols='50' rows='5'></textarea>
@@ -160,7 +160,7 @@ if(isset($_GET['prev']))
 	
 	<tr>
  		<td valign='top'>
-  			<label><strong>Sample Input :</strong></label>
+  			<label>Sample Input :</label>
  		</td>
  		<td>
  			<textarea  name='sampleip' cols='25' rows='5'></textarea>
@@ -169,7 +169,7 @@ if(isset($_GET['prev']))
 	
 	<tr>
  		<td valign='top'>
-  			<label><strong>Sample Output :</strong></label>
+  			<label>Sample Output :</label>
  		</td>
  		<td>
  			<textarea  name='sampleop' cols='25' rows='5'></textarea>
@@ -178,7 +178,7 @@ if(isset($_GET['prev']))
 	
 	<tr>
  		<td valign='top'>
-  			<label><strong>Sample Explanation :</strong></label>
+  			<label>Sample Explanation :</label>
  		</td>
  		<td>
  			<textarea  name='sampleexp' cols='50' rows='5'></textarea>
@@ -187,7 +187,7 @@ if(isset($_GET['prev']))
 	
 	<tr>
  		<td valign='top'>
-  			<label><strong>Allowed Languages :</strong></label>
+  			<label>Allowed Languages :</label>
  		</td>
  		<td>
 		<?php
@@ -203,7 +203,7 @@ error_reporting(-1);
 	
 	<tr>
  		<td valign='top'>
-  			<label><strong>Time Limit :</strong></label>
+  			<label>Time Limit :</label>
  		</td>
  		<td>
  			<input type='text' style='width: 100px;' name='time_limit' required x-moz-errormessage='Enter integer value'>
@@ -242,7 +242,7 @@ error_reporting(-1);
                
         <!-- <tr>
  		<td valign='top'>
-  			<label><strong>Memory Limit :</label>
+  			<label>Memory Limit :</label>
  		</td>
  		<td>
  			<input type='text' style='width: 100px;' name='memory_limit' required x-moz-errormessage='Enter integer value'>
@@ -252,7 +252,7 @@ error_reporting(-1);
 	
 	<tr>
  		<td valign='top'>
-  			<label><strong>Source Limit :</label>
+  			<label>Source Limit :</label>
  		</td>
  		<td>
  			<input type='text' style='width: 100px;' name='source_limit' required x-moz-errormessage='Enter integer value'>
@@ -261,7 +261,7 @@ error_reporting(-1);
 	</tr> -->
 	<tr> 
  		<td valign='top'>
-  			<label><strong>Problem type :</label>
+  			<label>Problem type :</label>
  		</td>
  		<td>
  			<select name='problem_type'>
@@ -273,7 +273,7 @@ error_reporting(-1);
 	
 	<tr>
  		<td valign='top'>
-  			<label><strong>Show In-depth View to students :</strong></label>
+  			<label>Show In-depth View to students :</label>
  		</td>
  		<td>
  			<select name='problem_showmistakes'>
@@ -284,7 +284,7 @@ error_reporting(-1);
 	</tr>
 	<tr>
  		<td valign='top'>
-  			<label><strong>Make solutions visible to all other students :</strong></label>
+  			<label>Make solutions visible to all other students :</label>
  		</td>
  		<td>
  			<select name='problem_visiblesolutions'>
@@ -295,7 +295,7 @@ error_reporting(-1);
 	</tr>
 	<tr>
  		<td valign='top'>
-  			<label><strong>Upload Test Files :</strong></label>
+  			<label>Upload Test Files :</label>
  		</td>
  		<td>
  			<table id='ioupload'>

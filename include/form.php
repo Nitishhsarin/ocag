@@ -35,7 +35,7 @@ else if(isset($_GET['loggedin']))
 
 ?>
 <form id='login_form' method='post' action='./functions/validate.php'>
-	<h2>LOGIN</h2>
+	<h2>LOGIN PANEL</h2>
 	<table id='logintable' >
 		<tr>
  		<td style='text-align:center; width:40%;'>

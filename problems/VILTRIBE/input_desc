@@ -1,0 +1,3 @@
+The first line of the input contains an integer T denoting the number of test cases.
+
+The first line of the input contains a string s denoting the configuration of the villages, each character of which can be 'A', 'B' or '.'.

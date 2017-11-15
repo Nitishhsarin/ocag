@@ -1,0 +1,3 @@
+There are n villages in a line in an area. There are two kinds of tribes A and B that reside there. A village can be either empty or occupied by one of the tribes. An empty village is said to be controlled by a tribe of village A if it is surrounded by villages of tribes A from the left and from the right. Same goes for the tribe B.
+
+Find out the number of villages that are either occupied by or controlled by tribes A and B, respectively.
