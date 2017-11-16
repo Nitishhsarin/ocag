@@ -270,7 +270,7 @@ error_reporting(-1);
 			</select>
  		</td>
 	</tr>
-	
+	<!--
 	<tr>
  		<td valign='top'>
   			<label>Show In-depth View to students :</label>
@@ -282,6 +282,7 @@ error_reporting(-1);
 			</select>
  		</td>
 	</tr>
+-->
 	<tr>
  		<td valign='top'>
   			<label>Make solutions visible to all other students :</label>

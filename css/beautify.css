@@ -58,10 +58,10 @@ a:active {color:#396070; text-decoration:none;}  /* selected link */
 }
 
 .logo {
-    color: #ffffff !important;
+    color: #fff !important;
     text-decoration: none !important;
     line-height: 50px;
-    font-size: 22px;
+    font-size: 28px;
 }
 
 .nav-bar {
@@ -83,6 +83,7 @@ a:active {color:#396070; text-decoration:none;}  /* selected link */
     margin-left:10%;
     width:60%;
     float:left;
+    /*padding-left:20px;*/
     padding-bottom: 40px;
 }
 
