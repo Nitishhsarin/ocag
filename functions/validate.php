@@ -91,7 +91,7 @@ if(isset($_POST['username']) && isset($_POST['password']))
 	mysqli_close($db);
 	if($status)
 	{
-		header("Location: ./../homepage.php?loggedin=true");		
+		header("Location: ./../user.php?user=$username");		
 	}
 	else
 	{

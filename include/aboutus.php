@@ -10,7 +10,7 @@
 	</tr>
 	<tr>
 		<td class='left'>Software Developer at WalmartLabs India </td>
-		<td class='right'>Software Developer at Sandisk Corporation <br> (Sreeparna Enthusiast)</td>
+		<td class='right'>Software Developer at Sandisk Corporation </td>
 	</tr>
 	<tr>
 		<td class='left'>
@@ -61,8 +61,8 @@
 		<td class='right' style='font-size:16px; font-weight:bold;'> Vidushi Sharma </td>
 	</tr>
 	<tr>
-		<td class='left'>Software Engineer at Wipro Limited.<br> (TOEFL Topper and GRE Enthusiast)</td>
-		<td class='right'>Software Developer at VMware Inc.<br>(Additional offers from JPMorgan Chase and Practo)</td>
+		<td class='left'>Software Engineer at Wipro Limited. </td>
+		<td class='right'>Software Developer at VMware Inc. </td>
 	</tr>
 	<tr>
 		<td class='left'>

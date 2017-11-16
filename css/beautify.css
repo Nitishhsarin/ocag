@@ -42,8 +42,8 @@ a:active {color:#396070; text-decoration:none;}  /* selected link */
 
 .header {
     width: 100%;
-    background-color: #29363B;
-    border-top: #29363B solid 10px;
+    background-color: #39424E;
+    border-top: #39424E solid 10px;
     height: 60px;
     padding: 0% 10%;
     box-sizing: border-box;
@@ -75,16 +75,14 @@ a:active {color:#396070; text-decoration:none;}  /* selected link */
 }
 
 .nav-bar a:hover {
-    background-color:#396070;
+    border-bottom: #2EC866 solid 4px;
 }
-
 #content
 {
     background-color:#ffffff;
     margin-left:10%;
     width:60%;
     float:left;
-    /*padding-left:20px;*/
     padding-bottom: 40px;
 }
 
@@ -117,7 +115,7 @@ a:active {color:#396070; text-decoration:none;}  /* selected link */
 {
     padding-top:8px;
     padding-bottom:8px;
-    background-color:#29363B;
+    background-color:#39424E;
     color:#ffffff;
 }
 #tc_analysis_table td
@@ -196,7 +194,7 @@ a:active {color:#396070; text-decoration:none;}  /* selected link */
 }
 #login_form h2
 {
-    background-color:#29363B;
+    background-color:#39424E;
     color:#ffffff;
     font-size:22px;
     font-weight:500;
@@ -209,7 +207,7 @@ a:active {color:#396070; text-decoration:none;}  /* selected link */
 #profile
 {
     width:100%;
-    background-color:#29363B;
+    background-color:#39424E;
     color:#ffffff;
     text-align:center;
 
@@ -350,12 +348,12 @@ a:active {color:#396070; text-decoration:none;}  /* selected link */
 .bbutton
 {
     background-color: #f9f9f9;
-    border:2px solid #29363B;
+    border:2px solid #39424E;
 }
 .bbutton:hover
 {
     border:2px solid #396070;
-    background-color: #29363B;
+    background-color: #39424E;
     color: #ffffff;
 }
 .bbutton:active
@@ -495,7 +493,7 @@ a:active {color:#396070; text-decoration:none;}  /* selected link */
     padding-top:8px;
     padding-bottom:8px;
     border:1px solid #ffffff;
-    background-color:#29363B;
+    background-color:#39424E;
     color:#ffffff;
 }
 #minitable td
@@ -521,7 +519,7 @@ a:active {color:#396070; text-decoration:none;}  /* selected link */
     padding-top:8px;
     padding-bottom:8px;
     border:1px solid #ffffff;
-    background-color:#29363B;
+    background-color:#39424E;
     color:#ffffff;
 }
 #listtable td
@@ -627,7 +625,7 @@ div.content_tab
 {
     width:80%;
     margin-left:10%;
-    background-color:#29363B;
+    background-color:#39424E;
     color:#ffffff;
     text-align:center;
 
