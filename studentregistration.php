@@ -15,7 +15,14 @@ if(!(isloggedin("admin")==true || ( isset($_GET['edit']) && (isloggedin("student
 else
 {
 	include('include/head.php');
+	echo '
+	<div id="content">
+	';
 	include('include/studentregform.php');
+	echo '
+	</div>
+	';
+	include('include/side.php');
 	include('include/bottom.php');
 }
 ?>

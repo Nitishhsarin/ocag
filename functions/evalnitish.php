@@ -368,27 +368,27 @@ else
 				mysqli_commit($db);
 				mysqli_close($db);
 				
-				//if($endresult==-1)
-				//{
-				//	echo "<form id='redirect_cte' method='post' action='./../solution.php?submissionid=$subid&a'>
-				//	<input type='hidden' name='submissionid' value='$subid'>
-				//	<input type='hidden' name='compileerror_details' value='$compileres'>
-				//	
-				//	<input type='submit' value='click here to continue'>
-				//	</form>			
+				if($endresult==-1)
+				{
+					echo "<form id='redirect_cte' method='post' action='./../solution.php?submissionid=$subid&a'>
+					<input type='hidden' name='submissionid' value='$subid'>
+					<input type='hidden' name='compileerror_details' value='$compileres'>
+					
+					<input type='submit' value='click here to continue'>
+					</form>			
 			
-				//	<script type='text/javascript'>
-				//	  document.getElementById('redirect_cte').submit();
-				//	</script>
+					<script type='text/javascript'>
+					  document.getElementById('redirect_cte').submit();
+					</script>
 
-				//	";
-				//}
-				//else if($showmistakes=='false' || $wrongcase_verdict==0)
+					";
+				}
+				else if($showmistakes=='false' || $wrongcase_verdict==0)
 				header("Location: ./../solution.php?submissionid=$subid");
 			
-				/* else
+				else
 				{
-					echo "<form id='redirect' method='post' action='./../solution.php?submissionid=$subid'>
+					echo "<form id='redirect' method='post' action='./../viewsolution.php?submissionid=$subid'>
 					<input type='hidden' name='submissionid' value='$subid'>
 					<input type='hidden' name='wrongcase_input' value='$wrongcase_input'>
 					<input type='hidden' name='wrongcase_output' value='$wrongcase_output'>			
@@ -402,7 +402,6 @@ else
 
 					";
 				}
-				*/
 		
 			}
 			else
@@ -411,7 +410,7 @@ else
 			
 				mysqli_rollback($db);
 				mysqli_close($db);
-				header("Location: ./../homepage.php?msg=$errorstr");
+				header("Location: ./../home.php?msg=$errorstr");
 			}
 		
 		

@@ -1,6 +1,4 @@
 <?php
-//*********************remove all echos 
-//*********************strip_tags(mysqli_real_escape_string($db, whereever required
 function linecmp($lineuserop,$lineop)
 {
 	$i=0;
@@ -24,7 +22,6 @@ function filecmp($userop,$op)
 	while(($lineop=fgets($op))!=false)
 	{
 		$lineoparr[]=trim($lineop);
-	//	echo $lineop;//REMOVE THIS LATER
 		$oparrsize++;
 		if(trim($lineop)!="")
 		{
@@ -38,7 +35,6 @@ function filecmp($userop,$op)
 	while(($lineuserop=fgets($userop))!=false)
 	{
 		$lineuseroparr[]=trim($lineuserop);
-	//	echo $lineuserop;//REMOVE THIS LATER
 		$useroparrsize++;
 		if(trim($lineuserop)!="")
 		{
@@ -75,7 +71,6 @@ else
 		mysqli_close($db);
 		$testid=$_POST['testid'];
 		echo "here";
-	//	header("Location: ./../test.php?testid=$testid");
 	}
 	else
 	{
@@ -102,7 +97,6 @@ else
 			$language=$_POST['language'];
 			$compiler=$languages_compilers[$language];
 			$extension=$languages_extensions[$language];
-			//SEE EXIT CODES FOR JAVA
 		
 			include('./../include/mysql_evaluate.php');
 			mysqli_autocommit($db,false);
@@ -115,13 +109,12 @@ else
 			}
 			else
 			{
-				$errorstr= "initial insertion failed";//what to do if initial insertion fails;
+				$errorstr= "initial insertion failed";
 				$status=false;
 				goto end;
 		
 			}
 			$subid= mysqli_insert_id($db);
-	//		$timestamp=date("YmdHms");
 			$timeofexecution=0.00;
 			$newfilename=$subid.$extension;
 			chdir("./../");//confirm this********************
@@ -368,25 +361,25 @@ else
 				mysqli_commit($db);
 				mysqli_close($db);
 				
-				//if($endresult==-1)
-				//{
-				//	echo "<form id='redirect_cte' method='post' action='./../solution.php?submissionid=$subid&a'>
-				//	<input type='hidden' name='submissionid' value='$subid'>
-				//	<input type='hidden' name='compileerror_details' value='$compileres'>
-				//	
-				//	<input type='submit' value='click here to continue'>
-				//	</form>			
+				if($endresult==-1)
+				{
+					echo "<form id='redirect_cte' method='post' action='./../solution.php?submissionid=$subid&a'>
+					<input type='hidden' name='submissionid' value='$subid'>
+					<input type='hidden' name='compileerror_details' value='$compileres'>
+					
+					<input type='submit' value='click here to continue'>
+					</form>			
 			
-				//	<script type='text/javascript'>
-				//	  document.getElementById('redirect_cte').submit();
-				//	</script>
+					<script type='text/javascript'>
+					  document.getElementById('redirect_cte').submit();
+					</script>
 
-				//	";
-				//}
-				//else if($showmistakes=='false' || $wrongcase_verdict==0)
+					";
+				}
+				else if($showmistakes=='false' || $wrongcase_verdict==0)
 				header("Location: ./../solution.php?submissionid=$subid");
 			
-				/* else
+				else
 				{
 					echo "<form id='redirect' method='post' action='./../solution.php?submissionid=$subid'>
 					<input type='hidden' name='submissionid' value='$subid'>
@@ -402,7 +395,6 @@ else
 
 					";
 				}
-				*/
 		
 			}
 			else
