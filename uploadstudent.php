@@ -23,7 +23,7 @@ else
 	echo "
 	<div id='content' style='margin-top: 20px'>
 		<h3>Register students via csv</h3>
-		<form method='post' enctype='multipart/form-data' action='./scripts/makestudent.php'>
+		<form method='post' enctype='multipart/form-data' action='./functions/makestudent.php'>
 		<p style='margin-top: 20px'><ul>
 		<li style='margin-top: 20px'>Upload the CSV file containing the data about students.<br></li>
 		<li style='margin-top: 5px'>The rows should adhere strictly to the following format:<br></li>
