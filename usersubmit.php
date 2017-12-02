@@ -65,6 +65,8 @@ else
 	<form action='usersubmit.php' method='get'>
 	Problem Code : <input  type='text' style='width: 200px;' name='pcode' id='searchstr_problem' > 
 	&nbsp;&nbsp;&nbsp;Username : <input type='text' name='username' style='width: 200px;' >
+	<br>
+	<br>
   	<input type='submit' value='Search for submissions' class='bbutton'>
   	</form>
 	<h3 style='text-align:center';>

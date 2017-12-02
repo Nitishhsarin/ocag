@@ -14,10 +14,15 @@ body
     padding:0;
 }
 /* fonts: Roboto, Signika, Archivo Narrow*/
-a:link {color:#2a4956; text-decoration:none;}    /* unvisited link */
+a:link {color:#39424E; text-decoration:none;}    /* unvisited link */
 a:visited {color:#2a4956; text-decoration:none;} /* visited link */
 a:hover {color:#396070;text-decoration:underline;}   /* mouse over link */
 a:active {color:#396070; text-decoration:none;}  /* selected link */
+
+a.bbutton:link
+{
+    color: #f9f9f9;
+}
 
 /*
 * Frequently used classes
@@ -348,9 +353,12 @@ a:active {color:#396070; text-decoration:none;}  /* selected link */
 }
 .bbutton
 {
-    background-color: #f9f9f9;
+    background-color: #39424E;
     border:2px solid #39424E;
 }
+
+
+
 .bbutton:hover
 {
     border:2px solid #396070;
