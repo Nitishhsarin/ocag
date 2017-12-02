@@ -161,8 +161,11 @@ else
       	include("./include/problem.php"); 
      	include("./include/io.php"); 
 	include("./include/explanation.php");
-		
 	include("./include/submit.php"); 
+	echo "<br>";
+	echo "<br>";
+	echo "<br>";
+	include("./include/customtestcase.php");	
 	
 
 	end:
