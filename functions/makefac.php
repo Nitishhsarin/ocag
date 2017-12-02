@@ -154,7 +154,8 @@ else
 	{
 		mysqli_commit($db);
 		mysqli_close($db);
-		header("Location: ./../facreg.php?prev=done");
+		$roll = $_POST['facultyid'];
+		header("Location: ./../user.php?user=$roll");
 	}
 	else
 	{

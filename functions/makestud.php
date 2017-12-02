@@ -149,7 +149,8 @@ else
 	{
 		mysqli_commit($db);
 		mysqli_close($db);
-		header("Location: ./../studentregistration.php?prev=done");
+		$roll = $_POST['rollno'];
+		header("Location: ./../user.php?user=$roll");	
 	}
 	else
 	{
