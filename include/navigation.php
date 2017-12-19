@@ -11,6 +11,9 @@
 			<a href='functions/logout.php'>Logout</a>
 			";
 		}
+		else {
+			echo " <a href='index.php'>Login</a>";
+		}
 		echo '
 	</div>';
 ?>

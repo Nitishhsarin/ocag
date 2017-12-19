@@ -13,5 +13,4 @@ function isloggedin($status)
 	}
 	return false;
 }
-
 ?>

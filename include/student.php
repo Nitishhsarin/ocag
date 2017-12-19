@@ -165,14 +165,14 @@ while($r=mysqli_fetch_array($res))
 		<td><img src='./media/AC.png' title='Accepted Submissions'></td>
 		<td><img src='./media/WA.png' title='Wrong Submissions'></td>
 		<td><img src='./media/TLE.png' title='Time Limit Exceeded'></td>
-		<td><img src='./media/RTE.png' title='Run Time Error'></td>
+		<!--<td><img src='./media/RTE.png' title='Run Time Error'></td>  -->
 		<td><img src='./media/CTE.png' title='Compile Time Error'></td>
 	</tr>
 	<tr>
 		<td><?php echo $count_AC; ?></td>
 		<td><?php echo $count_WA; ?></td>
 		<td><?php echo $count_TLE; ?></td>
-		<td><?php echo $count_RTE; ?></td>
+		<!--<td><?php echo $count_RTE; ?></td> -->
 		<td><?php echo $count_CTE; ?></td>
 	</tr>
 </table>

@@ -9,7 +9,7 @@
 
 <body>
 <div id='wrapper'>
-<?php 
+<?php
 require('functions/checkidentity.php');
 if(!(isloggedin("any")==true))
 {
@@ -42,7 +42,7 @@ else
 		}
 		else
 		{
-			
+
 			$res=mysqli_fetch_array($res);
 			$sub_problemcode=$res['problem_code'];
 			$query2="select visiblesolutions from problems where problem_code='$sub_problemcode'";
@@ -52,7 +52,7 @@ else
 		}
 		mysqli_close($db);
 	}
-	
+
 	if($subid=='' || ($current_usertype=='student' && $res['username']!=$current_user && $visiblesolutions=='false'))//REVISE FACULTY ACCESS
 	{
 		echo "INVALID PAGE";
@@ -81,7 +81,7 @@ else
 		<th><strong>User</strong></th>
 		<th><strong>Time</strong></th>
 		<th><strong>Language</strong></th>
-	
+
 	</tr>
 	<tr>
 		<td>$subid</td>
@@ -99,13 +99,13 @@ else
 	include('./include/languages.php');
 	$filename="./codes/$sub_username/$sub_problemcode/$subid";
 	$filename.=$languages_extensions[$sub_language];
-	
-	
+
+
 	$sol=file_get_contents($filename);
 	$lines=substr_count($sol,"
 ");
-	
-	
+
+
 	echo "
 <div id='in_depth_view'>
 <table id='in_depth_table'>
@@ -140,22 +140,35 @@ echo $sol;
 	<td><img src='./media/AC.png'></td>
 	<td><img src='./media/WA.png'></td>
 	<td><img src='./media/TLE.png'></td>
-	<td><img src='./media/RTE.png'></td>
+	<!--<td><img src='./media/RTE.png'></td>-->
 	</tr>
 	<tr>
 	<td>$sub_countac</td>
 	<td>$sub_countwa</td>
 	<td>$sub_counttle</td>
-	<td>$sub_countrte</td>
+	<!--<td>$sub_countrte</td>-->
 	</tr>
 	</table>
 	";
-	
-	if(isset($_POST['wrongcase_input']) && isset($_POST['wrongcase_output']) && isset($_POST['wrongcase_expectedoutput']))
+	if(isset($_POST['compileerror_details']))
 	{
-		$wrongfile_input=$_POST['wrongcase_input'];
-		$wrongfile_output=$_POST['wrongcase_output'];
-		$wrongfile_expectedoutput=$_POST['wrongcase_expectedoutput'];
+		$compileerror_details=$_POST['compileerror_details'];
+		echo "
+			<div class = 'tc_analysis_title'>
+			<label> Compile Error Details </label>
+			</div>
+			<div class = 'tc_analysis_blk'>
+			<pre>$compileerror_details</pre>
+			</div>
+
+			</div>
+		";
+	}
+	else if(isset($_SESSION['wrongcase_input']) && isset($_SESSION['wrongcase_output']) && isset($_SESSION['wrongcase_expectedoutput']))
+	{
+		$wrongfile_input=$_SESSION['wrongcase_input'];
+		$wrongfile_output=$_SESSION['wrongcase_output'];
+		$wrongfile_expectedoutput=$_SESSION['wrongcase_expectedoutput'];
 		echo "
 			<div class = 'tc_analysis_title'>
 			<label> Input: </label>
@@ -178,24 +191,10 @@ echo $sol;
 			</div>
 		";
 	}
-	if(isset($_POST['compileerror_details']))
-	{
-		$compileerror_details=$_POST['compileerror_details'];
-		echo "
-			<div class = 'tc_analysis_title'>
-			<label> Compile Error Details </label>
-			</div>
-			<div class = 'tc_analysis_blk'>
-			<pre>$compileerror_details</pre>
-			</div>
-			
-			</div>
-		";
-	}
-	end:
-	include('./include/bottom.php'); 
-}
 
+	end:
+	include('./include/bottom.php');
+}
 ?>
 </div> <!-- End #wrapper -->
 

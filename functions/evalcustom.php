@@ -1,5 +1,4 @@
 <?php
-
 		$probcode=$_GET['pcode'];
 		$language= ".cpp";
 		chdir("./../");

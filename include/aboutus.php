@@ -61,7 +61,7 @@
 		<td class='right' style='font-size:16px; font-weight:bold;'> Vidushi Sharma </td>
 	</tr>
 	<tr>
-		<td class='left'>Software Engineer at Wipro Limited. </td>
+		<td class='left'>Software Engineer at HSBC India </td>
 		<td class='right'>Software Developer at VMware Inc. </td>
 	</tr>
 	<tr>

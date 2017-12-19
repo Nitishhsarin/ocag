@@ -71,8 +71,6 @@ if(isset($_GET['prev']))
         {
         	var table = document.getElementById(tableID);
         	toDELETE.remove();
-        	/*alert("Row Index:" + toDELETE);
-        	table.deleteRow(toDELETE);*/
         }
 </script>
 
@@ -208,7 +206,7 @@ error_reporting(-1);
  		<td>
  			<input type='text' style='width: 100px;' name='time_limit' required x-moz-errormessage='Enter integer value'>
  			<script language='javascript' type='text/javascript'>
- 			function is_int(c)    //something's wrong here, I don't know. We have to fix it!!
+ 			function is_int(c)
  			{
  				alert('I am an int');
 				var x=c.value;
@@ -237,28 +235,6 @@ error_reporting(-1);
             <span> sec </span>
  		</td>
 	</tr>
-	
-	
-               
-        <!-- <tr>
- 		<td valign='top'>
-  			<label>Memory Limit :</label>
- 		</td>
- 		<td>
- 			<input type='text' style='width: 100px;' name='memory_limit' required x-moz-errormessage='Enter integer value'>
-                        <span> KB </span>
- 		</td>
-	</tr>
-	
-	<tr>
- 		<td valign='top'>
-  			<label>Source Limit :</label>
- 		</td>
- 		<td>
- 			<input type='text' style='width: 100px;' name='source_limit' required x-moz-errormessage='Enter integer value'>
-                        <span> KB </span>
- 		</td>
-	</tr> -->
 	<tr> 
  		<td valign='top'>
   			<label>Problem type :</label>
@@ -270,7 +246,6 @@ error_reporting(-1);
 			</select>
  		</td>
 	</tr>
-	<!--
 	<tr>
  		<td valign='top'>
   			<label>Show In-depth View to students :</label>
@@ -282,7 +257,6 @@ error_reporting(-1);
 			</select>
  		</td>
 	</tr>
--->
 	<tr>
  		<td valign='top'>
   			<label>Make solutions visible to all other students :</label>
