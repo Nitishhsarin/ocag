@@ -37,6 +37,5 @@
 		Password: helloyuvraj
         
 
-#The Team
-
+![The team](https://github.com/Nitishhsarin/ocag/blob/master/Team.png).
 
