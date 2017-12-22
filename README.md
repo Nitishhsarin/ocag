@@ -1,4 +1,4 @@
-# OCAG
+# O.C.A.G.
 
 ### Please perform the listed actions to get the Project Up & Running on your Linux Machine.
 
