@@ -25,10 +25,12 @@ Please perform the listed actions to get the Project Up & Running on your Linux 
 		Username: admin
 		Type: Admin
 		Password: hello
+        
 
 		Username: ajay
 		Type: Faculty
 		Password: helloajay
+        
 
 		Username: yuvraj
 		Type: Student
