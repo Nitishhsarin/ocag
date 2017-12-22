@@ -18,8 +18,9 @@ Please perform the listed actions to get the Project Up & Running on your Linux 
 		sudo chmod -R 777 htdocs
 		cd htdocs
 		sudo chmod -R 777 ocag
-1.Open the Web Browser and type localhost/ocag
-1.Login with the following credential initially.
+        
+- Open the Web Browser and type localhost/ocag
+- Login with the following credential initially.
 
 		Username: admin
 		Type: Admin
