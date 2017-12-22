@@ -1,7 +1,7 @@
 # OCAG
-> You just need to have a Linux Machine with a XAMPP installed on it.
+You just need to have a Linux Machine with a XAMPP installed on it.
 
-Please perform the listed actions to get the Project Up & Running on your Linux Machine.
+> Please perform the listed actions to get the Project Up & Running on your Linux Machine.
 
 
 - Firstly, Open Xampp and import the **autograder.sql** file. The Database is now setup
