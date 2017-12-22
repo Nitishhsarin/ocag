@@ -7,6 +7,7 @@ Please perform the listed actions to get the Project Up & Running on your Linux 
 1. Firstly, Open Xampp and import the autograder.sql file. The Database is now setup
 1. Copy the ocag folder into /opt/lampp/htdocs/ folder
 1. Open Terminal and Type the following commands to open the XAMPP manager GUI in sequence as it is
+
 		cd /opt/lampp/
         sudo ./manager-linux-x64.run
 	
