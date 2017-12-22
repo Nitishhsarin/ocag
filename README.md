@@ -17,6 +17,7 @@ Please perform the listed actions to get the Project Up & Running on your Linux 
 		sudo chmod -R 777 ocag
 5) Open the Web Browser and type localhost/ocag
 6) Login with the following credential initially.
+
 		Username: admin
 		Type: Admin
 		Password: hello
@@ -28,5 +29,3 @@ Please perform the listed actions to get the Project Up & Running on your Linux 
 		Username: yuvraj
 		Type: Student
 		Password: helloyuvraj
-
-
