@@ -38,5 +38,5 @@
         
 
 #The Team
-![Team.png]({{site.baseurl}}/Team.png)
+
 
