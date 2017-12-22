@@ -19,7 +19,8 @@
 		sudo chmod -R 777 ocag
         
 - Open the Web Browser and type **localhost/ocag**
-- Login with the following credential initially.
+
+> Login with the following credential initially.
 
 		Username: admin
 		Type: Admin
