@@ -69,6 +69,13 @@ else
 	$sub_executiontime=$res['executiontime'];
 	$sub_language=$res['language'];
 	//echo "$sub_timestamp";
+	echo "<br>";
+	if(isset($_SESSION['istest']) && $_SESSION['istest'] == true){
+		$_SESSION['istest'] = '';
+		$testid = $_SESSION['testid'];
+		$_SESSION['testid'] = '';
+		echo "<div style = 'margin-left: 135px;'' ><a href = './test.php?testid=$testid'><input type = 'button' value = 'Back to Problems' class = 'bbutton'></a></div>";
+	}
 	echo "
 	<br />
 	<div>

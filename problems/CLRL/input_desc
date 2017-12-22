@@ -1,3 +1,0 @@
-First line contains number of test cases T.
-The first line of each test case contains the number of people Chef meets, N and Reziba's rating R seperated by a space.
-Second line of each test case contains N number of space separated ratings from A1 to AN where AN is always equal to R.

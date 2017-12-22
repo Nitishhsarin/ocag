@@ -111,8 +111,11 @@ else
 	echo "<br>";
 	if($show!=true)
 		goto end;
-	if($istest==true)
+	if($istest==true){
+			$_SESSION['istest'] = $istest;
+			$_SESSION['testid'] = $testid;
 		echo "<a href='./test.php?testid=$testid'><input type='button' value='Back to Problems' class='bbutton' ></a>";
+	}
 	echo "<br><a href='./usersubmit.php?pcode=$probcode' class='bbutton'>View Submissions </a>";
 	
 	$languagesallowed=array();

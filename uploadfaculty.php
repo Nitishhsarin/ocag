@@ -19,7 +19,7 @@ else
 	include("include/head.php");
 	echo "
 	<div id='content' style='margin-top: 20px'>
-		<h3>Register students via csv</h3>
+		<h3>Register faculty via csv</h3>
 		<form method='post' enctype='multipart/form-data' action='./functions/makefaculty.php'>
 		<p style='margin-top: 20px'><ul>
 		<li style='margin-top: 20px'>Upload the CSV file containing the data about faculties.<br></li>

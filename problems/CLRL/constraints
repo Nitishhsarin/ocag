@@ -1,6 +1,0 @@
-1 ≤ T ≤ 50
-1 ≤ N ≤ 106
-1 ≤ sum of N in all test-cases ≤ 1.5*106
-1 ≤ Ai ≤ 109
-Integers in A are distinct
-AN = R
