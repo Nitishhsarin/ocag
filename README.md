@@ -35,3 +35,8 @@
 		Username: yuvraj
 		Type: Student
 		Password: helloyuvraj
+        
+
+#The Team
+![Team.png]({{site.baseurl}}/Team.png)
+
