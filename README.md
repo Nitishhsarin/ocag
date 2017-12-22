@@ -11,12 +11,13 @@ Please perform the listed actions to get the Project Up & Running on your Linux 
 		cd /opt/lampp/
         sudo ./manager-linux-x64.run
 	
-Now Start your Apache and MySQL Servers.
-1. Now open a new Terminal and type the following commands to sequence as it is
-		3.cd /opt/lampp/
-		3.sudo chmod -R 777 htdocs
-		3.cd htdocs
-		3.sudo chmod -R 777 ocag
+- Now Start your Apache and MySQL Servers.
+- Open a new Terminal instance and type the following commands to sequence as it is
+		
+        cd /opt/lampp/
+		sudo chmod -R 777 htdocs
+		cd htdocs
+		sudo chmod -R 777 ocag
 1.Open the Web Browser and type localhost/ocag
 1.Login with the following credential initially.
 
